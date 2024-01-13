@@ -3,8 +3,14 @@
 #
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 monitor=, highres, 1706x0, 1
 monitor=eDP-1, 2560x1440@165, 0x400, 1.5
+{{- end }}
+
+{{- if eq .chezmoi.hostname "WorkLaptop" }}
+monitor=eDP-1, 1920x1200, , 
+{{- end }}
 
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -284,8 +290,10 @@ bind=,XF86AudioLowerVolume,exec,wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-
 bind=,XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
 bind = , XF86AudioPlay, exec, mpc -q toggle
 
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 # Toggle Laptop Profile:
 bind=,XF86Launch4,exec,asusctl profile -n & notify-send "Laptop Profile:" "$(asusctl profile --profile-get)" & sleep 5
+{{- end }}
 
 ##################
 ## Startup Apps ##
@@ -331,21 +339,25 @@ exec-once=mpd
 exec=swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh'
 
 
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 # Games:
 exec-once=discord
 exec-once=firefox && hyprctl dispatch movetoworkspacesilent 10, class:(firefox)
+{{- end }}
 
 ##################
 ## Window Rules ##
 ##################
 
 
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 # Games:
 windowrulev2 = workspace 9 silent ,class:(steam)
 windowrulev2 = workspace 8 silent ,class:(discord)
 windowrulev2 = workspace 8 silent ,class:(Spotify)
 windowrulev2 = workspace 9 silent ,class:(lutris)
 windowrulev2 = forceinput ,class:(GodotGame1)
+{{- end }}
 
 # Work:
 windowrulev2 = workspace 2 silent ,class:(obsidian)
@@ -356,4 +368,7 @@ windowrulev2 = workspace name:lock silent ,class:(lockscreen)
 ## Workspace Rules
 
 workspace = 8, monitor:1, gapsin:0, gapsout:0
+
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 workspace = 1, monitor:0, gapsin:5, gapsout:15
+{{- end }}
