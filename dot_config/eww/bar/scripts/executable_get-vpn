@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+VPN=$(nmcli c show --active | grep vpn | awk '{print $1}')
+if [ "$1" = "output" ]; then
+    if [[ -n $VPN ]]; then
+        echo $VPN
+    else
+        echo Unavailable
+    fi
+elif [ "$1" = "status" ]; then
+    if [[ -n $VPN ]]; then
+        echo true
+    else
+        echo false
+    fi
+fi

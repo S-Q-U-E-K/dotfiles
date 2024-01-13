@@ -1,0 +1,11 @@
+;;  variables ;;
+(include "./config/variables.yuck")
+
+;; Widgets ;;
+(include "./config/widgets.yuck")
+
+;; Control Center ;;
+(include "./config/widgets-ctrl.yuck")
+
+;; Windows ;;
+(include "./config/windows.yuck")

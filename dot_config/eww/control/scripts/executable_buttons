@@ -1,0 +1,48 @@
+#!/bin/bash
+WSTAT="$(nmcli r wifi)"
+NSTAT="$(dunstctl is-paused)"
+VSTAT="$(amixer -D pulse | head -6 | grep off | cut -d " " -f 8)"
+PWSTAT="$(rfkill -o TYPE,SOFT | grep wlan | cut -d " " -f 7)"
+PBSTAT="$(rfkill -o TYPE,SOFT | grep bluetooth | cut -d " " -f 2)"
+
+if [[ "$WSTAT" == "enabled" ]]; then
+    WIFI_BUT="wifi_but"
+else
+    WIFI_BUT="wifi_but_off"
+fi
+
+if [[ "$PBSTAT" == "unblocked" ]]; then
+    BT_BUT="bt_but"
+else
+    BT_BUT="bt_but_off"
+fi
+
+if [[ "$NSTAT" == "true" ]]; then
+    NOTIF_BUT="notif_but"
+else
+    NOTIF_BUT="notif_but_off"
+fi
+
+if [[ "$VSTAT" == "[off]" ]]; then
+    VOL_BUT="vol_but_off"
+else
+    VOL_BUT="vol_but"
+fi
+
+if [[ "$PWSTAT" == "blocked" && "$PBSTAT" == "blocked" ]]; then
+    PLANE_BUT="plane_but"
+else
+    PLANE_BUT="plane_but_off"
+fi
+
+if [ "$1" = "wif"i ]; then
+    echo $WIFI_BUT
+elif [ "$1" = "notif" ]; then
+    echo $NOTIF_BUT
+elif [ "$1" = "vol" ]; then
+    echo $VOL_BUT
+elif [ "$1" = "plane" ]; then
+    echo $PLANE_BUT
+elif [ "$1" = "bt" ]; then
+    echo $BT_BUT
+fi

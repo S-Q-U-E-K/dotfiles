@@ -1,0 +1,211 @@
+// Bar //
+
+@import "/home/zekea/.cache/wal/colors.scss";
+
+* { all: unset;
+//    font-family: FontAwesome;
+    font-family: feather;
+    font-family: DaddyTimeMono NF;
+}
+
+// Global Styles
+.bar-class {
+    background-color: $background;
+    color: $foreground;
+    padding: 5px;
+    margin: 4px 0px;
+    border-radius: 16px;
+}
+
+.control_but {
+    color: $color1;
+    margin: 2px 5px 0px 5px;
+}
+
+.workspaces-widget {
+    margin: 0px 0px 0px 0px;
+    background-color: $color0;
+    border-radius: 16px;
+}
+
+.current {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 3px 0px 3px;
+    border-radius: 16px;
+    background-color: $background;
+    color: $color1;
+}
+
+.empty {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 3px 0px 3px;
+    border-radius: 16px;
+    color: $color8;
+}
+.occupied {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 3px 0px 3px;
+    border-radius: 16px;
+}
+
+.vpn_module {
+    margin: 0px 2px 0px 0px;
+    padding: 1px 0px 0px 0px;
+    color: $foreground;
+}
+
+.vpn_label {
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 1px 0px;
+    color: $foreground;
+}
+
+.vpn_icon {
+    font-size: 15;
+    color: $foreground;
+    margin: 0px 5px 0px 10px;
+}
+
+.ssid_module {
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 0px 0px;
+    color: $foreground;
+}
+
+.ssid_label {
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 1px 0px;
+    color: $foreground;
+}
+
+.time{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.sdate{
+    margin: 0px 5px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.sep {
+    margin: 0px 5px 2px 5px;
+    padding: 0px 0px 0px 0px;
+    color: $color10
+}
+
+.volbar trough highlight {
+    background-image: linear-gradient(to right, $color14 30%, $color6 50%, $color3 100% *50);
+    border-radius: 10px;
+  }
+
+.vol_module {
+    margin: 0px 2px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: $foreground
+}
+
+.volume_icon {
+    font-size: 18;
+    color: $foreground;
+  margin: 0px 10px 0px 10px;
+}
+
+.wifi_icon {
+    font-size: 18;
+    color: $foreground;
+    margin: 0px 10px 0px 10px;
+}
+
+.notif_icon {
+    color: $foreground;
+    margin: 0px 10px 0px 10px;
+}
+
+.log_icon {
+    font-size: 18;
+    color: $foreground;
+    margin: 0px 10px 0px 10px;
+}
+
+.power_icon {
+    font-size: 18;
+    color: $foreground;
+    margin: 0px 10px 0px 10px;
+}
+
+.brightbar trough highlight {
+    background-image: linear-gradient(to right, $color14 30%, $color6 50%, $color3 100% *50);
+    border-radius: 10px;
+}
+
+.bright_module {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: $foreground;
+}
+
+.bright_icon {
+    font-size: 15;
+    color: $foreground;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.iconmem {
+    color: #e0b089;
+}
+.iconbat {
+    color: #afbea2;
+}
+.iconbat, .iconmem {
+    font-size: 6;
+    margin: 8px 8px 8px 8px;
+}
+
+
+.membar {
+    color: #e0b089;
+      background-color: #38384d;
+    border-radius: 10px;
+  }
+.batbar {
+    color: #afbea2;
+      background-color: #38384d;
+    border-radius: 10px;
+}
+
+.mem_module {
+    background-color: $background;
+	border-radius: 16px;
+  margin: 1px 5px 0px 3px;
+  }
+.bat_module {
+    background-color: $background;
+	border-radius: 16px;
+  margin: 1px 5px 0px 5px;
+  }
+
+.bat_stat {
+    margin: 0px 2px 0px 0px;
+}
+
+.updates {
+    background-color: $color1;
+    color: $foreground;
+    border-radius: 16px;
+    padding: 0px 5px 0px 5px;
+    margin: 2px 0px 0px 0px;
+}
+
+
+scale trough {
+    all: unset;
+    background-color: #22242b;
+    box-shadow: 0 2px 3px 2px #06060b;
+    border-radius: 16px;
+    min-height: 10px;
+    min-width: 70px;
+    margin: 0px 10px 0px 0px;
+  }

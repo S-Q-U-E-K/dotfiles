@@ -1,0 +1,268 @@
+// Control Centre //
+
+@import "/home/zekea/.cache/wal/colors.scss";
+
+//Profile:
+* {
+    all: unset;
+}
+// Global Styles
+.ctrl_centre{
+    background-color: $background;
+    color: $foreground;
+    padding: 5px;
+    border-radius: 16px;
+}
+
+
+
+.profile_picture {
+	background-image:  url('icons/profile-trans.png');
+	background-size: 180px;
+	background-position: 50% 35%;
+	min-height: 180px;
+	min-width: 180px;
+	margin: 0px 0px 0px 0px;
+	border-radius: 0px 16px 0px 50px;
+}
+
+.profile_greeting {
+	color: $foreground;
+	font-size : 18px;
+	font-weight : normal;
+	margin : 0px 0px 0px 10px;
+}
+
+.profile_username {
+	color: #a1bdce;
+	font-size : 36px;
+	font-weight : bold;
+	margin : -30px 0px 0px 0px;
+}
+
+//Dates:
+.alldate {
+    color: $foreground;
+}
+
+.time {
+    color: $foreground;
+}
+
+.date {
+    color: $foreground;
+}
+
+.day+month {
+    color: $foreground;
+}
+
+.hour_class {
+    color: #bec8da;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 15px 0px 0px 10px;
+}
+
+.minute_class {
+    color: #bec8da;
+    font-size: 42px;
+    margin: 15px 10px 0px 20px;
+}
+
+.mer_class {
+    color: #767c87;
+    font-size: 22px;
+    margin: 15px 0px 0px 0px;
+}
+
+
+.day_class {
+    color: #767c88;
+    font-size: 30px;
+    margin: 0px 0px 10px 10px;
+}
+
+.month_class {
+    color: #767c88;
+    font-size: 30px;
+    margin: 0px 10px 10px 10px;
+}
+
+.year_class {
+    color: #767c88;
+    font-size: 30px;
+    margin: 0px 20px 10px 10px;
+}
+
+
+.time_sep_class {
+    color: #bec8da;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+.day_class_n {
+    color: #767c88;
+    font-size: 18px;
+    margin: 0px 0px 5px 10px;
+}
+
+.month_class_n {
+    color: #767c88;
+    font-size: 18px;
+    margin: 0px 0px 5px 0px;
+}
+
+
+
+
+// Music
+.volume_bar scale trough highlight {
+	all: unset;
+    background-color: $foreground;
+	border-radius: 24px;
+}
+.mic_bar scale trough highlight {
+	all: unset;
+    background-color: $foreground;
+	border-radius: 24px;
+}
+.bright_bar scale trough highlight {
+    all: unset;
+    background-color: $foreground;
+    border-radius: 24px;
+}
+
+scale trough {
+	all: unset;
+	background-color: #232232;
+	border-radius: 24px;
+	min-height: 130px;
+	min-width: 14px;
+	margin : 10px 0px 0px 0px;
+}
+
+.vol_icon, .mic_icon, .bright_icon {
+    color: $foreground;
+    margin: 0px 0px 10px 0px;
+}
+
+.bigstat {
+    font-size: 24;
+    margin: 0px 0px 0px 0px;
+    border-radius: 10;
+}
+
+.bigbat, .bigcpu, .bigmem {
+    color: $color1;
+    border-radius: 10;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+}
+
+.bigbattext, .bigcputext, .bigmemtext {
+    margin: 10px 0px 10px 0px;
+}
+
+.storage scale trough highlight {
+	all: unset;
+    background-color: $foreground;
+	border-radius: 8px 20px 2px 8px;
+}
+
+.storage scale trough {
+	all: unset;
+	background-color: #191F2a;
+	border-radius: 8px;
+	min-height: 10px;
+	min-width: 450px;
+	margin : 15px;
+}
+
+.ctrl_widget {
+    background-color: #191F2a;
+    border-radius: 20;
+    margin: 10px;
+}
+
+.wifi_but, .notif_but, .vol_but, .log_but, .plane_but, .bt_but {
+    background-color: $color1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.log_but, .power_but, .reboot_but, .sleep_but, {
+    background-color: $color5;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.wifi_but_off, .notif_but_off, .vol_but_off, .log_but_off, .plane_but_off, .bt_but_off {
+    background-color: $background;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.msc_bg {
+	background-size: cover;
+	background-position: center;
+    background-image: url("icons/msc_bg.png");
+	min-height: 140px;
+	min-width: 140px;
+	margin: 0px;
+	border-radius: 16px;
+}
+
+.msc_cover_art {
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    min-height: 60px;
+	min-width: 12px;
+	margin: 10px 10px 10px 10px;
+}
+
+.song {
+    font-size: 24px;
+	font-weight : bold;
+    color: #bfc9db;
+	margin : 10px 0px 0px 15px;
+}
+.song_artist {
+    font-size: 18px;
+	font-weight : bold;
+    color: #bfc9db;
+	margin : 0px 0px 0px 15px;
+}
+
+.song_prog scale trough highlight {
+	all: unset;
+    background-color: $foreground;
+	border-radius: 8px 20px 2px 8px;
+}
+.song_prog scale trough {
+	all: unset;
+	background-color: #232232;
+	border-radius: 8px;
+	min-height: 5px;
+    min-width: 220px;
+	margin : 10px;
+}
+.music_prog_bg {
+    background-color: #191F2a;
+    border-radius: 8px;
+}
+
+.msc_ctrl_widget {
+    background-color: #191F2a;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.msc_control {
+    margin: 7px;
+}

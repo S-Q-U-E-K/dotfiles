@@ -1,0 +1,3 @@
+(include "/home/zekea/.config/eww/bar/config/variables.yuck")
+(include "/home/zekea/.config/eww/bar/config/widgets.yuck")
+(include "/home/zekea/.config/eww/bar/config/windows.yuck")

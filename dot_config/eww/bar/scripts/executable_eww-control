@@ -1,0 +1,8 @@
+#!/bin/sh
+BAR_STAT="$(eww -c /home/zekea/.config/eww/control windows)"
+
+if [[ "$BAR_STAT" == "*bar" ]]; then
+    eww -c /home/zekea/.config/eww/control close bar
+elif [[ "$BAR_STAT" == "bar" ]]; then
+    eww -c /home/zekea/.config/eww/control open bar
+fi

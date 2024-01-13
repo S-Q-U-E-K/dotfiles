@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Script to toggle wlan and bluetooth soft blocked status
+
+rfkill list wlan | grep -q "Soft blocked: no" && rfkill block wlan || rfkill unblock wlan
+rfkill list bluetooth | grep -q "Soft blocked: no" && rfkill block bluetooth || rfkill unblock bluetooth

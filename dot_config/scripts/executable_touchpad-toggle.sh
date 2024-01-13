@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#if [ "$state" -eq '1' ];then
+#    xinput --disable "$TPdevice" && notify-send -i emblem-nowrite "Touchpad" "Disabled"
+#else
+#    xinput --enable "$TPdevice" && notify-send -i input-touchpad "Touchpad" "Enabled"
+#fi
+
+# Set device to be toggled
+HYPRLAND_DEVICE="asue1209:00-04f3:319f-touchpad"
+HYPRLAND_VARIABLE="device:$HYPRLAND_DEVICE:enabled"
+
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    export XDG_RUNTIME_DIR=/run/user/$(id -u)
+fi
+
+# Check if device is currently enabled (1 = enabled, 0 = disabled)
+DEVICE="$(hyprctl getoption $HYPRLAND_VARIABLE | grep 'int: 1')"
+
+if [ -z "$DEVICE" ]; then
+    # if the device is disabled, then enable
+    notify-send -u normal "Enabling Touchpad"
+    hyprctl keyword $HYPRLAND_VARIABLE true
+else
+    # if the device is enabled, then disable
+    notify-send -u normal "Disabling Touchpad"
+    hyprctl keyword $HYPRLAND_VARIABLE false
+fi

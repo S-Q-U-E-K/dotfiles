@@ -1,0 +1,210 @@
+
+(defwidget sep []
+  (box :class "sep"
+   (label :text "|")))
+
+(defwidget control []
+  (button :onclick eww-control :class "control_but"
+          (label :text "" :class "control_but_icon")))
+
+(defwidget time []
+  (eventbox :onhover "${eww} update sdate_reveal=true" :class "time"
+            :onhoverlost "${eww} update sdate_reveal=false"
+  (box :class "time" :space-evenly "false" :orientation "h" :spacing "3"
+       (label :text "${time}" :class "time")
+       (revealer :transition "slideleft"
+                 :reveal sdate_reveal
+                 :duration "350ms"
+       (box :class "sdate"
+            (label :text ": ${sdate}"))))))
+
+
+(defwidget workspaces []
+  (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
+    (box :space-evenly false
+      (label :text "${workspaces}${current_workspace}" :visible false)
+      (for workspace in workspaces
+        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+            (label :text "${workspace.id == current_workspace ? "" : ""}")))))))
+
+
+(defwidget window_w []
+  (box
+    (label :text "${window}")))
+
+(defwidget vpn []
+           (box :class "vpn"
+                (revealer :transition "slideleft"
+                          :reveal vpn_status
+                          :duration "350ms"
+           (eventbox :onhover "${eww} update vpn_reveal=true"
+                     :onhoverlost "${eww} update vpn_reveal=false"
+            (box :class "vpn_module" :space-evenly "false" :orientation "h" :spacing "3"
+                 (button :class "vpn_icon" "󰴽")
+                 (revealer :transition "slideleft"
+                           :reveal vpn_reveal
+                           :duration "350ms"
+                    (box :class "vpn_label"
+                         (label :text "${vpn_name}" :limit-width 15 :show-truncated true))))))))
+
+(defwidget getssid []
+  (eventbox :onhover "${eww} update wifi_reveal=true"
+               :onhoverlost "${eww} update wifi_reveal=false"
+  (box :class "ssid_module" :space-evenly "false" :orientation "h" :spacing "3"
+       (button :onclick "scripts/pop ssid" :class "ssid_icon" "")
+       (revealer :transition "slideleft"
+                 :reveal wifi_reveal
+                 :duration "350ms"
+       (box :class "ssid_label"
+          (label :text "${ssid}" :limit-width 15 :show-truncated true))))))
+
+
+(defwidget volume []
+  (eventbox :onhover "${eww} update vol_reveal=true"
+			  :onhoverlost "${eww} update vol_reveal=false"
+  (box :class "vol_module" :space-evenly "false" :orientation "h" :spacing "3"
+       (button   :onclick "scripts/pop audio"   :class "volume_icon" "")
+	(revealer :transition "slideleft"
+			  :reveal vol_reveal
+			  :duration "350ms"
+	(scale    :class "volbar"
+			  :value volume_percent
+			  :orientation "h"
+			  :tooltip "${volume_percent}%"
+			  :max 100
+			  :min 0
+			  :onchange "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ {}%" )))))
+
+
+(defwidget bright []
+  (eventbox :onhover "${eww} update br_reveal=true" :onhoverlost "${eww} update br_reveal=false"
+  (box :class "bright_module" :space-evenly "false" :orientation "h" :spacing "3"
+    (label :text "" :class "bright_icon" :tooltip "brightness")
+	(revealer :transition "slideleft"
+			  :reveal br_reveal
+			  :duration "350ms"
+	(scale    :class "brightbar"
+			  :value brightness_percent
+			  :orientation "h"
+			  :tooltip "${brightness_percent}%"
+			  :max 100
+			  :min 0
+			  :onchange "brightnessctl set {}%" )))))
+
+
+(defwidget bat []
+		(eventbox :onhover "${eww} update bat_reveal=true" :onhoverlost "${eww} update bat_reveal=false"
+            (box :class "bat_module" :vexpand "false" :hexpand "false"
+            (circular-progress :value battery
+                :class "batbar"
+                :thickness 4
+            (button
+                :class "iconbat"
+                :limit-width 2
+                :tooltip "battery on ${battery}%"
+                :show_truncated false
+                :onclick "$HOME/.config/eww/bar/scripts/pop system"
+                :wrap false
+                ;""))))
+                " ")))))
+
+
+(defwidget bat_stat []
+  (eventbox :onhover "${eww} update bat_reveal=true" :onhoverlost "${eww} update bat_reveal=false"
+  (box :class "bat_stat" :space-evenly "false" :orientation "h" :spacing "3"
+       (revealer :transition "slideleft"
+                 :reveal bat_reveal
+                 :duration "350ms"
+       (label :class "bat_stat" :text "${battery}% ${battery_status}")))))
+
+
+(defwidget mem []
+        (eventbox :onhover "${eww} update mem_reveal=true" :onhoverlost "${eww} update mem_reveal=false"
+		(box :class "mem_module" :vexpand "false" :hexpand "false"
+            (circular-progress :value memory
+                :class "membar"
+                :thickness 4
+            (button
+                :class "iconmem"
+                :limit-width 2
+                :tooltip "using ${memory}% ram"
+                :onclick "$HOME/.config/eww/bar/scripts/pop system"
+                :show_truncated false
+                :wrap false
+                ;""))))
+                " ")))))
+
+
+(defwidget mem_stat []
+        (eventbox :onhover "${eww} update mem_reveal=true" :onhoverlost "${eww} update mem_reveal=false"
+        (box :class "mem_stat" :space-evenly "false" :orientation "h" :spacing "3"
+             (revealer :transition "slideleft"
+                       :reveal mem_reveal
+                       :duration "350ms"
+             (label :class "mem_stat" :text "${memory_used_mb}Mb / ${memory_total_mb}Mb")))))
+
+
+(defwidget updates []
+  (box :space-evenly "false" :orientation "h" :spacing "3"
+       (revealer :transition "slideleft"
+                 :reveal updates_reveal
+                 :duration "350ms"
+       (label :text "${updates} " :class "updates"))))
+
+
+(defwidget sep_updates []
+  (box :class "sep"
+    (revealer :transition "slideleft"
+              :reveal updates_reveal
+              :duration "350ms"
+   (label :text "|"))))
+
+
+;; Bar Sections ;;
+(defwidget right []
+  (box :orientation "h"
+       :class "bar-class"
+       :space-evenly false
+       :halign "end"
+  (updates)
+  (sep_updates)
+  (bat)
+  (bat_stat)
+  (mem)
+  (mem_stat)
+  (sep)
+  (bright)
+  (volume)
+  (getssid)
+  (vpn)
+  (sep)
+  (time)
+  (sep)
+  (control)))
+
+
+(defwidget center []
+  (box :orientation "h"
+       :class "bar-class"
+       :space-evenly "false"
+       :halign "center"
+       (window_w)))
+
+
+(defwidget left []
+  (box :orientation "h"
+       :class "bar-class"
+       :space-evenly "false"
+       :halign "start"
+       (workspaces)))
+
+
+
+;; Bar ;;
+(defwidget bar []
+  (centerbox :orientation "h"
+       :class "bar-class"
+  (left)
+  (center)
+  (right)))

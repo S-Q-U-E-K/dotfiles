@@ -1,0 +1,11 @@
+(defwindow bar
+  :monitor 1
+  :geometry (geometry :x "20px"
+                      :y "0%"
+                      :width "15%"
+                      :height "91%"
+                      :anchor "right center")
+  :stacking "fg"
+  :exclusive "false"
+  :focusable "false"
+  (ctrl_centre))

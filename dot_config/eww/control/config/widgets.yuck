@@ -1,0 +1,239 @@
+
+;; Control Centre ;;
+
+(defwidget profile []
+  (box :orientation "v" :spacing 10 :space-evenly "false" :vexpand "false" :hexpand "false" :halign "end"
+				(box :class "profile_picture" :halign "end" :style "background-image: url(${profile_img});")
+				(label :class "profile_greeting" :halign "center" :wrap "true" :limit-width 25 :text "${username}, ${uptime}")))
+
+
+;(defwidget alldate []
+;  (box :orientation "v" :spacing 5 :space-evenly "false" :vexpand "false" :hexpand "false" :class "alldate"
+;        (label :class "time" :halign "center" :text "${time}")
+;        (label :class "date" :halign "center" :text "${date}")
+;        (label :class "day+month" :halign "center" :text "${day-month}")))
+
+(defwidget time []
+		(box
+             :orientation "v"
+             :space-evenly "false"
+             :vexpand "false"
+             :hexpand "false"
+             :spacing 0
+		(box
+             :orientation "h"
+             :space-evenly "false"
+             :vexpand "false"
+             :halign "start"
+             :hexpand "false"
+             :spacing 0
+			 (label :class "hour_class"
+                    :valign "start"
+                    :halign "start"
+                    :wrap "true"
+                    :limit-width 25
+                    :text time_hour)
+			 (label :class "minute_class"
+                    :valign "start"
+                    :halign "start"
+                    :wrap "true"
+                    :limit-width 25
+                    :text time_min)
+			 (label :class "mer_class"
+                    :valign "start"
+                    :halign "start"
+                    :wrap "true"
+                    :text time_mer))
+            (box :orientation "h"
+              :spacing 0
+              :space-evenly "false"
+              :halign "start"
+              :vexpand "false" :hexpand "false"
+			  (label :class "day_class"
+                     :valign "start"
+                     :text time_day)
+			  (label :class "time_sep"
+                     :valign "start"
+                     :text " ")
+			  (label :class "month_class"
+                     :valign "start"
+                     :text time_month)
+			  (label :class "year_class"
+                     :valign "start"
+                     :text time_year))
+            (box :orientation "h"
+              :spacing 0
+              :space-evenly "false"
+              :halign "start"
+              :vexpand "false" :hexpand "false"
+			  (label :class "day_class_n"
+                     :valign "start"
+                     :text time_day_name)
+			  (label :class "time_sep_class"
+                     :valign "start"
+                     :text ", ")
+			  (label :class "month_class_n"
+                     :valign "start"
+                     :text time_month_name))))
+
+(defwidget audio []
+  (box :vexpand "false" :hexpand "true" :class "vol_bar":class "ctrl_widget"
+		(box :orientation "h" :spacing 25 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+		(box :class "volume_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+               (scale :flipped "true" :orientation "vertical" :min 0 :max 101 :value volume_percent :onchange "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ {}%" )
+                    (label  :text "" :class "vol_icon"))
+        (box :class "mic_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+                (scale :flipped "true" :orientation "v" :min 0 :max 101 :value mic_percent :onchange "amixer -D pulse sset Capture {}%")
+                    (label  :text "" :class "mic_icon"))
+        (box :class "bright_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+                (scale :flipped "true" :orientation "v" :min 0 :max 101 :value brightness_percent :onchange "brightnessctl set {}%")
+                    (label :text "" :class "bright_icon")))))
+
+
+(defwidget music []
+		(box :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "true"
+			(box :orientation "v" :spacing 5 :space-evenly "false" :vexpand "false" :hexpand "true" :class "msc_bg"
+				(label :halign "start" :class "song" :wrap "false" :limit-width 12 :text song)
+				(label :halign "start" :class "song_artist" :wrap "true" :limit-width 15 :text song_artist)
+                (box :class "msc_cover_art" :style "background-image: url('${cover_art}');" :width 2))))
+
+(defwidget music_ctl []
+				(box :orientation "v" :class "msc_ctrl_widget"
+                  (box :orientation "v" :spacing 5 :halign "center" :space-evenly "true" :vexpand "false" :hexpand "false" :class "msc_control"
+					(button :class "song_btn_prev" :onclick "~/.config/eww/control/scripts/music_info --prev" "")
+					(button :class "song_btn_play" :onclick "~/.config/eww/control/scripts/music_info --toggle" song_status)
+					(button :class "song_btn_next" :onclick "~/.config/eww/control/scripts/music_info --next" "")
+					(button :class "song_btn_loop" :onclick "~/.config/eww/control/scripts/music_info --loop" loop_status))))
+
+
+(defwidget music_prog []
+           (box :orientation "h" :space-evenly "false" :class "music_prog_bg"
+                (box :spacing 0 :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" :class "song_prog"
+			         (scale :orientation "h" :min 0 :max 101 :value song_time))))
+
+(defwidget music_box []
+  (box :orientation "v" :space-evenly "false" :spacing 7
+       (music)
+       (music_prog)))
+
+(defwidget bigbat []
+  (box :class "bigstat" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false"
+       (circular-progress :value battery
+                          :class "bigbat"
+                          :thickness 32)
+       (label :class "bigbattext" :text "BAT")))
+
+
+(defwidget bigcpu []
+  (box :class "bigstat" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false"
+       (circular-progress :value cpu
+                          :class "bigcpu"
+                          :thickness 32)
+       (label :class "bigcputext" :text "CPU")))
+
+
+(defwidget bigmem []
+  (box :class "bigstat" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false"
+       (circular-progress :value memory
+                          :class "bigmem"
+                          :thickness 32)
+       (label :class "bigmemtext" :text "MEM")))
+
+
+(defwidget systray []
+  (box :class "sys_tray" :class "ctrl_widget" :valign "center" :space-evenly "false" :orientation "h" :halign "fill"
+    (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
+      (button :class wifi_but :onclick "scripts/nettoggle"
+              (label :text "" :class "wifi_icon"))
+      (button :class bt_but :onclick "scripts/bttoggle"
+              (label :text "󰂯" :class "bt_icon"))
+      (button :class plane_but :onclick "scripts/planetoggle"
+              (label :text "󰀝" :class "plane_icon"))
+      (button :class notif_but :onclick "dunstctl set-paused toggle"
+              (label :text "" :class "notif_icon"))
+      (button :class vol_but :onclick "amixer -D pulse set Master toggle"
+              (label :text "" :class "volume_icon")))))
+
+(defwidget power []
+  (box :class "power" :class "ctrl_widget" :valign "center" :space-evenly "false" :orientation "h" :halign "fill"
+       (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
+            (button :class "log_but" :onclick "hyprctl dispatch exit"
+              (label :text "" :class "log_icon"))
+            (button :class "power_but" :onclick "poweroff"
+              (label :text "⏻" :class "power_icon"))
+            (button :class "reboot_but" :onclick "reboot"
+              (label :text "" :class "reboot_icon"))
+            (button :class "sleep_but" :onclick "systemctl suspend"
+                    (label :text "󰤄" :class "sleep_icon"))
+            (button :class "lock_but" :onclick "/home/zekea/.config/scripts/swaylock.sh"
+                    (label :text "" :class "lock_icon")))))
+
+(defwidget storage []
+  (box :orientation "h" :space-evenly "false"
+	  (box :class "storage" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "true"
+          (scale :orientation "h" :min 0 :max 100 :value storage))))
+
+
+(defwidget shortcuts []
+           (box :class "shortcut_tray" :class "ctrl_widget" :valign "center ":orientation "h" :space-evenly "true" :halign "fill"
+                (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
+                     (button :class "firefox" :onclick "firefox"
+                             (label :text "󰈹" :class "firefox_icon"))
+                     (button :class "spotify" :onclick "spotify"
+                             (label :text "" :class "spotify_icon"))
+                     (button :class "discord" :onclick "discord"
+                             (label :text "󰙯" :class "discord_icon"))
+                     (button :class "nmtui" :onclick "kitty nmtui"
+                             (label :text "󰀂" :class "nmtui_icon")))))
+
+;; Control Centre ;;
+(defwidget layer1 []
+  (box :orientation "h"
+       :class "layer"
+       (time)
+       (profile)))
+
+(defwidget layer2 []
+  (box :orientation "h"
+       :class "layer"
+       :halign "fill"
+       :valign "fill"
+       :space-evenly "false"
+       (music_box)
+       (music_ctl)
+       (audio)))
+
+(defwidget layer3 []
+  (centerbox :orientation "h"
+       :class "ctrl_widget"
+       :valign "center"
+       (bigbat)
+       (bigcpu)
+       (bigmem)))
+
+(defwidget layer4 []
+  (box :orientation "h"
+       :class "layer"
+       (systray)))
+
+(defwidget layer5 []
+           (box :orientation "h"
+                :class "layer"
+                (shortcuts)))
+
+(defwidget layer6 []
+  (box :orientation "h"
+       :class "layer"
+       (power)))
+
+(defwidget ctrl_centre []
+  (box :orientation "v"
+       :class "ctrl_centre"
+       :space-evenly false
+       (layer1)
+       (layer2)
+       (layer3)
+       (storage)
+       (layer4)
+       (layer5)
+       (layer6)))

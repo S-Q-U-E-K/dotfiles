@@ -1,0 +1,65 @@
+
+;; Variables ;;
+(defpoll time :interval "1s" `date +%H:%M`)
+
+(defpoll volume :interval "1s" "scripts/getvol")
+
+(defpoll volume_percent :interval "0.1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll mic_percent :interval "3s" "amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll brightness_percent :interval "3s" "brightnessctl -m -d amdgpu_bl1 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
+
+(defpoll battery :interval "15s" "scripts/battery --bat")
+(defpoll battery_status :interval "15s" "scripts/battery --bat-st")
+
+(defpoll memory :interval "15s" "scripts/memory")
+(defpoll memory_used_mb :interval "1s" "scripts/mem-ad used")
+(defpoll memory_total_mb :interval "2m" "scripts/mem-ad total")
+(defpoll memory_free_mb :interval "2m" "scripts/mem-ad free")
+
+(defpoll username :interval "48h"  "whoami")
+
+(defpoll uptime :interval "50s" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ hour,/h/;s/ minutes/m/;s/ minute/m/'")
+
+(defpoll time_hour :interval "5m"
+       "date +\"%I\"")
+(defpoll time_year :interval "5m"
+       "date +\"%C\"")
+(defpoll time_min :interval "5s"
+       "date +\"%M\"")
+(defpoll time_mer :interval "12h"
+        "date +\"%p\"")
+(defpoll time_day :interval "30m"
+       "date +\"%d\"")
+(defpoll time_month :interval "48h"
+      "date +\%m")
+(defpoll time_day_name :interval "30m"
+       "date +\"%A\"")
+(defpoll time_month_name :interval "48h"
+      "date +\%B")
+
+(defpoll cpu :interval "1s" "scripts/cpu")
+
+(defpoll song :interval "3s"  "scripts/music_info --song")
+(defpoll song_artist :interval "3s"  "scripts/music_info --artist")
+(defpoll song_status :interval "3s"  "scripts/music_info --status")
+(defpoll loop_status :interval "5s"  "scripts/music_info --loop_ic")
+(defpoll song_time :interval "0.5s"  "scripts/music_info --time")
+(defpoll cover_art :interval "2s"  "scripts/music_info --cover")
+
+(defpoll storage :interval "15m" "df -H | grep /dev/dm-0 | head -n 1 | awk '{print $5}' | sed 's/%//g'")
+
+(defpoll wifi_but :interval "1s" "scripts/buttons wifi")
+(defpoll bt_but :interval "1s" "scripts/buttons bt")
+(defpoll plane_but :interval "1s" "scripts/buttons plane")
+(defpoll notif_but :interval "1s" "scripts/buttons notif")
+(defpoll vol_but :interval "1s" "scripts/buttons vol")
+
+;; Static Variables ;;
+(defvar profile_img "icons/profile-trans.png")
+(defvar eww "/bin/eww -c $HOME/.config/eww/bar/")
+(defvar wifi_but_off "off")
+(defvar notif_but_off "off")
+(defvar vol_but_off "off")
+(defvar log_but_off "off")
+(defvar power_but_off "off")
+(defvar plane_but_off "off")

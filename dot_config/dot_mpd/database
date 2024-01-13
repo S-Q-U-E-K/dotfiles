@@ -1,0 +1,1135 @@
+info_begin
+format: 2
+mpd_version: 0.23.12
+fs_charset: UTF-8
+tag: Artist
+tag: ArtistSort
+tag: Album
+tag: AlbumSort
+tag: AlbumArtist
+tag: AlbumArtistSort
+tag: Title
+tag: Track
+tag: Name
+tag: Genre
+tag: Date
+tag: OriginalDate
+tag: Composer
+tag: ComposerSort
+tag: Performer
+tag: Conductor
+tag: Work
+tag: Movement
+tag: MovementNumber
+tag: Ensemble
+tag: Location
+tag: Grouping
+tag: Disc
+tag: Label
+tag: MUSICBRAINZ_ARTISTID
+tag: MUSICBRAINZ_ALBUMID
+tag: MUSICBRAINZ_ALBUMARTISTID
+tag: MUSICBRAINZ_TRACKID
+tag: MUSICBRAINZ_RELEASETRACKID
+tag: MUSICBRAINZ_WORKID
+info_end
+directory: Bring Me The Horizon
+mtime: 1684686092
+begin: Bring Me The Horizon
+directory: POST HUMAN SURVIVAL HORROR
+mtime: 1685659800
+begin: Bring Me The Horizon/POST HUMAN SURVIVAL HORROR
+song_begin: Dear Diary,.flac
+Time: 164.797000
+Title: Dear Diary,
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 1
+Disc: 1
+Date: 2020-10-30
+Format: 44100:16:2
+mtime: 1684685256
+song_end
+song_begin: Parasite Eve.flac
+Time: 291.812000
+Title: Parasite Eve
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 2
+Disc: 1
+Date: 2020-10-30
+Format: 44100:16:2
+mtime: 1684685271
+song_end
+song_begin: Teardrops.flac
+Time: 215.003000
+Title: Teardrops
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 3
+Disc: 1
+Date: 2020-10-30
+Format: 44100:16:2
+mtime: 1684685285
+song_end
+song_begin: Obey (with YUNGBLUD).flac
+Time: 220.538000
+Title: Obey
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 4
+Disc: 1
+Date: 2020-10-30
+Artist: YUNGBLUD
+Format: 44100:16:2
+mtime: 1684685308
+song_end
+song_begin: Itch For The Cure (When Will We Be Free_).flac
+Time: 86.242000
+Title: Itch For The Cure (When Will We Be Free?)
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 5
+Disc: 1
+Date: 2020-10-30
+Format: 44100:16:2
+mtime: 1684685310
+song_end
+song_begin: Kingslayer (feat. BABYMETAL).flac
+Time: 220.041000
+Title: Kingslayer
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 6
+Disc: 1
+Date: 2020-10-30
+Artist: BABYMETAL
+Format: 44100:16:2
+mtime: 1684685473
+song_end
+song_begin: 1x1 (feat. Nova Twins).flac
+Time: 209.598000
+Title: 1x1
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 7
+Disc: 1
+Date: 2020-10-30
+Artist: Nova Twins
+Format: 44100:16:2
+mtime: 1684685376
+song_end
+song_begin: Ludens.flac
+Time: 280.151000
+Title: Ludens
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 8
+Disc: 1
+Date: 2020-10-30
+Format: 44100:16:2
+mtime: 1684685415
+song_end
+song_begin: One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death (feat. Amy Lee).flac
+Time: 243.140000
+Title: One Day The Only Butterflies Left Will Be In Your Chest As You March Towards Your Death
+Artist: Bring Me the Horizon
+Album: POST HUMAN: SURVIVAL HORROR
+AlbumArtist: Bring Me the Horizon
+Track: 9
+Disc: 1
+Date: 2020-10-30
+Artist: Amy Lee
+Format: 44100:16:2
+mtime: 1684685441
+song_end
+end: Bring Me The Horizon/POST HUMAN SURVIVAL HORROR
+directory: Sempiternal
+mtime: 1683781684
+begin: Bring Me The Horizon/Sempiternal
+song_begin: 01. Bring Me The Horizon - Can You Feel My Heart.m4a
+Time: 228.206000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Can You Feel My Heart
+Track: 1
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781532
+song_end
+song_begin: 02. Bring Me The Horizon - The House of Wolves.m4a
+Time: 205.218000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: The House of Wolves
+Track: 2
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781547
+song_end
+song_begin: 03. Bring Me The Horizon - Empire (Let Them Sing).m4a
+Time: 225.744000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Empire (Let Them Sing)
+Track: 3
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781553
+song_end
+song_begin: 04. Bring Me The Horizon - Sleepwalking.m4a
+Time: 230.156000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Sleepwalking
+Track: 4
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781557
+song_end
+song_begin: 05. Bring Me The Horizon - Go to Hell, for Heavens Sake.m4a
+Time: 243.066000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Go to Hell, for Heavens Sake
+Track: 5
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781587
+song_end
+song_begin: 06. Bring Me The Horizon - Shadow Moses.m4a
+Time: 243.368000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Shadow Moses
+Track: 6
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781593
+song_end
+song_begin: 07. Bring Me The Horizon - And the Snakes Start to Sing.m4a
+Time: 301.999000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: And the Snakes Start to Sing
+Track: 7
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781597
+song_end
+song_begin: 08. Bring Me The Horizon - Seen It All Before.m4a
+Time: 247.478000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Seen It All Before
+Track: 8
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781642
+song_end
+song_begin: 09. Bring Me The Horizon - Antivist.m4a
+Time: 193.701000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Antivist
+Track: 9
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781645
+song_end
+song_begin: 10. Bring Me The Horizon - Crooked Young.m4a
+Time: 214.994000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Crooked Young
+Track: 10
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781650
+song_end
+song_begin: 11. Bring Me The Horizon - Hospital for Souls.m4a
+Time: 406.465000
+Artist: Bring Me The Horizon
+Album: Sempiternal
+Title: Hospital for Souls
+Track: 11
+Genre: Metalcore
+Date: 2013
+AlbumArtist: Bring Me The Horizon
+Format: 44100:f:2
+mtime: 1683781684
+song_end
+end: Bring Me The Horizon/Sempiternal
+directory: That's The Spirit
+mtime: 1684685454
+begin: Bring Me The Horizon/That's The Spirit
+song_begin: 01 Bring Me the Horizon - Doomed.flac
+Time: 274.133000
+Title: Doomed
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: d42528ce-1853-40dc-8909-23e96a91cbba
+Track: 1
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 500692ba-618d-4f55-a5bf-7a985c3fbe38
+Format: 44100:16:2
+mtime: 1684685410
+song_end
+song_begin: 02 Bring Me the Horizon - Happy Song.flac
+Time: 239.386000
+Title: Happy Song
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 78659fca-ff54-4506-9935-37f93140e964
+Track: 2
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: b50c5fc5-e0c9-4311-9a2c-ff95d72f44ac
+Format: 44100:16:2
+mtime: 1684685282
+song_end
+song_begin: 03 Bring Me the Horizon - Throne.flac
+Time: 191.520000
+Title: Throne
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-08-28
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: e4947b35-422b-4547-ad99-a107c1a40861
+Track: 3
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 18f9c9c8-4ba7-4e53-a98c-7b4d6d1fe6f1
+Format: 44100:16:2
+mtime: 1684685289
+song_end
+song_begin: 04 Bring Me the Horizon - True Friends.flac
+Time: 232.320000
+Title: True Friends
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 1d7efa94-d67e-4c07-83da-d807192b02cf
+Track: 4
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 5a00d1c6-dca9-4f0e-bafc-c02bed0ed174
+Format: 44100:16:2
+mtime: 1684685297
+song_end
+song_begin: 05 Bring Me the Horizon - Follow You.flac
+Time: 231.106000
+Title: Follow You
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 64cde045-5d03-47bc-8d9e-9789dbefc7e3
+Track: 5
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 6a0ed6a7-52fe-4948-87e4-64f8619b4663
+Format: 44100:16:2
+mtime: 1684685305
+song_end
+song_begin: 06 Bring Me the Horizon - What You Need.flac
+Time: 252.400000
+Title: What You Need
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-08-28
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 7d867ce0-1190-4277-ba06-b941c3dde497
+Track: 6
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: e95b5df3-f8f2-40d3-b260-a669511792df
+Format: 44100:16:2
+mtime: 1684685424
+song_end
+song_begin: 07 Bring Me the Horizon - Avalanche.flac
+Time: 262.013000
+Title: Avalanche
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 321e1cee-e9db-4f7b-a423-c84ed6ecead1
+Track: 7
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 68b406f4-297b-4292-a4c2-99fc99f532d5
+Format: 44100:16:2
+mtime: 1684685433
+song_end
+song_begin: 08 Bring Me the Horizon - Run.flac
+Time: 222.760000
+Title: Run
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 58c0ca9d-dfa4-4d73-8ece-22c3b733de28
+Track: 8
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: f045ee4c-0c55-4d10-99c6-cc935cfec986
+Format: 44100:16:2
+mtime: 1684685359
+song_end
+song_begin: 09 Bring Me the Horizon - Drown (New).flac
+Time: 222.093000
+Title: Drown (New)
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 251f5c8d-1974-4d02-bb34-9039f6eb2492
+Track: 9
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 2e78db8d-4fd0-4b22-9cc4-5d80542a2e7c
+Format: 44100:16:2
+mtime: 1684685374
+song_end
+song_begin: 10 Bring Me the Horizon - Blasphemy.flac
+Time: 275.013000
+Title: Blasphemy
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 109b989a-7fec-4f3b-a422-c14372d6728c
+Track: 10
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 84c2e468-a0d7-496d-a0c2-0933515f405c
+Format: 44100:16:2
+mtime: 1684685400
+song_end
+song_begin: 11 Bring Me the Horizon - Oh No.flac
+Time: 301.013000
+Title: Oh No
+Artist: Bring Me the Horizon
+AlbumArtist: Bring Me the Horizon
+Date: 2015-09-11
+Album: That’s the Spirit
+Disc: 1
+OriginalDate: 2015-09-11
+Genre: Alternative Metal
+Genre: Alternative Rock
+Genre: Electronic Rock
+Genre: Metalcore
+Genre: Nu Metal
+Genre: Pop Rock
+MUSICBRAINZ_ALBUMID: 91a6d97d-9ca3-4461-b842-059f4291c399
+MUSICBRAINZ_ARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_ALBUMARTISTID: 074e3847-f67f-49f9-81f1-8c8cea147e8e
+MUSICBRAINZ_TRACKID: 90321896-a575-48b1-970e-c6dc699c4b5c
+Track: 11
+Label: RCA
+MUSICBRAINZ_RELEASETRACKID: 5e1b33b0-0a3f-4d1f-8ba4-6c9c4c808b50
+Format: 44100:16:2
+mtime: 1684685453
+song_end
+end: Bring Me The Horizon/That's The Spirit
+end: Bring Me The Horizon
+directory: Fall Out Boy
+mtime: 1684686105
+begin: Fall Out Boy
+directory: American BeautyAmerican Psycho
+mtime: 1684685412
+begin: Fall Out Boy/American BeautyAmerican Psycho
+song_begin: 01. Irresistible.flac
+Time: 206.506000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Irresistible
+Track: 1
+Format: 44100:16:2
+mtime: 1684685315
+song_end
+song_begin: 02. American Beauty-American Psycho.flac
+Time: 195.946000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: American Beauty/American Psycho
+Track: 2
+Format: 44100:16:2
+mtime: 1684685324
+song_end
+song_begin: 03. Centuries.flac
+Time: 228.360000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Centuries
+Track: 3
+Format: 44100:16:2
+mtime: 1684685411
+song_end
+song_begin: 04. The Kids Aren’t Alright.flac
+Time: 260.920000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: The Kids Aren’t Alright
+Track: 4
+Format: 44100:16:2
+mtime: 1684685353
+song_end
+song_begin: 05. Uma Thurman.flac
+Time: 211.573000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Uma Thurman
+Track: 5
+Format: 44100:16:2
+mtime: 1684685359
+song_end
+song_begin: 06. Jet Pack Blues.flac
+Time: 179.266000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Jet Pack Blues
+Track: 6
+Format: 44100:16:2
+mtime: 1684685366
+song_end
+song_begin: 07. Novocaine.flac
+Time: 226.866000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Novocaine
+Track: 7
+Format: 44100:16:2
+mtime: 1684685373
+song_end
+song_begin: 08. Fourth of July.flac
+Time: 224.360000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Fourth of July
+Track: 8
+Format: 44100:16:2
+mtime: 1684685382
+song_end
+song_begin: 09. Favorite Record.flac
+Time: 203.413000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Favorite Record
+Track: 9
+Format: 44100:16:2
+mtime: 1684685388
+song_end
+song_begin: 10. Immortals.flac
+Time: 189.386000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Immortals
+Track: 10
+Format: 44100:16:2
+mtime: 1684685395
+song_end
+song_begin: 11. Twin Skeleton’s (Hotel in NYC).flac
+Time: 220.413000
+Album: American Beauty/American Psycho
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+Date: 2015
+Disc: 1
+Genre: Pop Punk
+Title: Twin Skeleton’s (Hotel in NYC)
+Track: 11
+Format: 44100:16:2
+mtime: 1684685402
+song_end
+end: Fall Out Boy/American BeautyAmerican Psycho
+directory: Infinity on High
+mtime: 1684685557
+begin: Fall Out Boy/Infinity on High
+song_begin: 01. Thriller.flac
+Time: 209.720000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Thriller
+Track: 1
+Format: 44100:16:2
+mtime: 1684685489
+song_end
+song_begin: 02. “The Take Over, the Breaks Over”.flac
+Time: 213.586000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: “The Take Over, the Breaks Over”
+Track: 2
+Format: 44100:16:2
+mtime: 1684685494
+song_end
+song_begin: 03. This Ain’t a Scene, It’s an Arms Race.flac
+Time: 212.040000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: This Ain’t a Scene, It’s an Arms Race
+Track: 3
+Format: 44100:16:2
+mtime: 1684685500
+song_end
+song_begin: 04. I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You).flac
+Time: 211.720000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: I’m Like a Lawyer With the Way I’m Always Trying to Get You Off (Me + You)
+Track: 4
+Format: 44100:16:2
+mtime: 1684685504
+song_end
+song_begin: 05. Hum Hallelujah.flac
+Time: 230.506000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Hum Hallelujah
+Track: 5
+Format: 44100:16:2
+mtime: 1684685510
+song_end
+song_begin: 06. Golden.flac
+Time: 152.400000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Golden
+Track: 6
+Format: 44100:16:2
+mtime: 1684685513
+song_end
+song_begin: 07. Thnks fr th Mmrs.flac
+Time: 203.506000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Thnks fr th Mmrs
+Track: 7
+Format: 44100:16:2
+mtime: 1684685518
+song_end
+song_begin: 08. Don’t You Know Who I Think I Am.flac
+Time: 171.960000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Don’t You Know Who I Think I Am?
+Track: 8
+Format: 44100:16:2
+mtime: 1684685523
+song_end
+song_begin: 09. The (After) Life of the Party.flac
+Time: 201.706000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: The (After) Life of the Party
+Track: 9
+Format: 44100:16:2
+mtime: 1684685527
+song_end
+song_begin: 10. The Carpal Tunnel of Love.flac
+Time: 203.840000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: The Carpal Tunnel of Love
+Track: 10
+Format: 44100:16:2
+mtime: 1684685534
+song_end
+song_begin: 11. Bang the Doldrums.flac
+Time: 211.333000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Bang the Doldrums
+Track: 11
+Format: 44100:16:2
+mtime: 1684685540
+song_end
+song_begin: 12. Fame - Infamy.flac
+Time: 186.026000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: Fame < Infamy
+Track: 12
+Format: 44100:16:2
+mtime: 1684685544
+song_end
+song_begin: 13. You’re Crashing, but You’re No Wave.flac
+Time: 222.200000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: You’re Crashing, but You’re No Wave
+Track: 13
+Format: 44100:16:2
+mtime: 1684685550
+song_end
+song_begin: 14. I’ve Got All This Ringing in My Ears and None on My Fingers.flac
+Time: 246.533000
+Album: Infinity on High
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2007
+Disc: 1
+Genre: Pop Punk
+Title: I’ve Got All This Ringing in My Ears and None on My Fingers
+Track: 14
+Format: 44100:16:2
+mtime: 1684685556
+song_end
+end: Fall Out Boy/Infinity on High
+directory: Take This to Your Grave
+mtime: 1684685483
+begin: Fall Out Boy/Take This to Your Grave
+song_begin: 01. “Tell That Mick He Just Made My List of Things to Do Today”.flac
+Time: 210.426000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: “Tell That Mick He Just Made My List of Things to Do Today”
+Track: 1
+Format: 44100:16:2
+mtime: 1684685418
+song_end
+song_begin: 02. Dead on Arrival.flac
+Time: 194.493000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Dead on Arrival
+Track: 2
+Format: 44100:16:2
+mtime: 1684685424
+song_end
+song_begin: 03. Grand Theft Autumn-Where Is Your Boy.flac
+Time: 191.373000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Grand Theft Autumn/Where Is Your Boy
+Track: 3
+Format: 44100:16:2
+mtime: 1684685433
+song_end
+song_begin: 04. Saturday.flac
+Time: 216.699000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Saturday
+Track: 4
+Format: 44100:16:2
+mtime: 1684685439
+song_end
+song_begin: 05. Homesick at Space Camp.flac
+Time: 188.513000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Homesick at Space Camp
+Track: 5
+Format: 44100:16:2
+mtime: 1684685444
+song_end
+song_begin: 06. Sending Postcards from a Plane Crash (Wish You Were Here).flac
+Time: 176.786000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Sending Postcards from a Plane Crash (Wish You Were Here)
+Track: 6
+Format: 44100:16:2
+mtime: 1684685450
+song_end
+song_begin: 07. Chicago Is so Two Years Ago.flac
+Time: 199.840000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Chicago Is so Two Years Ago
+Track: 7
+Format: 44100:16:2
+mtime: 1684685455
+song_end
+song_begin: 08. The Pros and Cons of Breathing.flac
+Time: 201.506000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: The Pros and Cons of Breathing
+Track: 8
+Format: 44100:16:2
+mtime: 1684685462
+song_end
+song_begin: 09. Grenade Jumper.flac
+Time: 178.600000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Grenade Jumper
+Track: 9
+Format: 44100:16:2
+mtime: 1684685466
+song_end
+song_begin: 10. Calm Before the Storm.flac
+Time: 267.386000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Calm Before the Storm
+Track: 10
+Format: 44100:16:2
+mtime: 1684685473
+song_end
+song_begin: 11. Reinventing the Wheel to Run Myself Over.flac
+Time: 141.336000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: Reinventing the Wheel to Run Myself Over
+Track: 11
+Format: 44100:16:2
+mtime: 1684685477
+song_end
+song_begin: 12. The Patron Saint of Liars and Fakes.flac
+Time: 199.916000
+Album: Take This to Your Grave
+AlbumArtist: Fall Out Boy
+AlbumArtistSort: Fall Out Boy
+Artist: Fall Out Boy
+ArtistSort: Fall Out Boy
+Date: 2003
+Disc: 1
+Genre: Pop Punk
+Title: The Patron Saint of Liars and Fakes
+Track: 12
+Format: 44100:16:2
+mtime: 1684685482
+song_end
+end: Fall Out Boy/Take This to Your Grave
+end: Fall Out Boy
+song_begin: 02-body-paint.wav
+Time: 290.584000
+Format: 44100:16:2
+mtime: 1683932994
+song_end

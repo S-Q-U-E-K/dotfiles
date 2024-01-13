@@ -1,0 +1,98 @@
+#! /bin/sh
+
+
+########################
+########################
+##### BSPWM CONFIG #####
+########################
+########################
+
+
+#############
+## Imports ##
+#############
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# bspc monitor HDMI-A-0 I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Emacs state=tiled
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a launcher state=floating follow=on center=true rectangle=768x864+0+0
+bspc rule -a Virt-manager state=floating
+bspc rule -a ScratchUpdates state=floating sticky=on hidden=on rectangle=1440x550+600+26
+bspc rule -a Scratchpad state=floating stick=on hidden=on rectangle=1440x550+600+26
+
+#################
+## Starup Apps ##
+#################
+
+## Appearance:
+
+# Compositor:
+# picom --config /home/zekea/.config/picom.conf
+
+# Bar:
+pulseaudio -D &
+sleep 0.5 && /home/zekea/.config/polybar/launch.sh --hack &
+
+# Monitor:
+xrandr --output --mode 2560x1440 --rate 165 &
+
+# Fonts:
+$HOME/.local/bin/wal -i /home/zekea/Pictures/wallpapers/Celeste/Celeste_Space--primary.png &
+
+## System Apps:
+
+# NetworkManager:
+nm-applet &
+
+# time setting
+ntpd -qg &
+
+# Firewall:
+# ufw enable &
+
+# Notifications:
+# dunst &
+
+# Updates Dropdown:
+# kitty --class ScratchUpdates -c ~/.config/kitty/kitty-small-font.config clear && watch -cn 1 sudo genlop -ci &
+
+# Terminal Dropdown:
+kitty --class Scratchpad -c ~/.config/kitty/kitty-small-font.config &
+
+# Emacs daemon to speedup emacs startup times:
+emacs --bg-daemon &
+
+# Screen Locker:
+xautolock -time 10 -locker '$HOME/.config/scripts/i3lock.sh' &
+
+## User Apps:
+
+# Web Browser:
+qutebrowser &
+
+# Discord:
+# discord &
+
+# Steam:
+# steam &
+
+# Music Player:
+# Spotify &
+
+setxkbmap gb

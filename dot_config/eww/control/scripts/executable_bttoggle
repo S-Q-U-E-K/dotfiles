@@ -1,0 +1,3 @@
+#! /bin/bash
+
+rfkill list bluetooth | grep -q "Soft blocked: no" && rfkill block bluetooth || rfkill unblock bluetooth

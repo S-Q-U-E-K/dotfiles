@@ -1,0 +1,9 @@
+#!/bin/bash
+
+STATUS="$(nmcli r wifi)"
+
+if [[ "$STATUS" == "enabled" ]]; then
+    nmcli r wifi off
+elif [[ "$STATUS" == "disabled" ]]; then
+    nmcli r wifi on
+fi

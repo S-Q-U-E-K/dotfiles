@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "/usr/bin/checkupdates-with-aur | /usr/bin/wc -l" == 0 ]; then
+    /usr/bin/eww -c /home/zekea/.config/eww/bar update updates_reveal=false
+else
+    /usr/bin/eww -c /home/zekea/.config/eww/bar update updates_reveal=true
+    /usr/bin/eww -c /home/zekea/.config/eww/bar update updates="$(/usr/bin/checkupdates-with-aur | /usr/bin/wc -l)"
+fi
