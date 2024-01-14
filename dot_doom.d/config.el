@@ -135,6 +135,5 @@
       (remove-hook 'evil-insert-state-entry-hook #'chezmoi--evil-insert-state-enter 1)
       (remove-hook 'evil-insert-state-exit-hook #'chezmoi--evil-insert-state-exit 1))))
 (add-hook 'chezmoi-mode-hook #'chezmoi-evil)
-(global-set-key (kbd "C-c C f")  #'chezmoi-find)
-(global-set-key (kbd "C-c C s")  #'chezmoi-write)
-
+(global-set-key (kbd "C-c C-d")  #'chezmoi-find)
+(global-set-key (kbd "C-c C-s")  #'chezmoi-write)
