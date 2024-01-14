@@ -1,6 +1,6 @@
 #source = /home/zekea/.cache/wal/hyprland-colors.conf
 preload = /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--primary.png
-{{- if eq .chezmoi.hostname = "ArchLaptop" }}
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 preload = /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--2560x1080.png
 {{- end }}
 #preload = $wallpaper
@@ -10,8 +10,8 @@ preload = /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--2560x10
 
 #set the default wallpaper(s) seen on inital workspace(s) --depending on the number of monitors used
 wallpaper = eDP-1, /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--primary.png
-{{- if eq .chezmoi.hostname = "ArchLaptop" }}
-wallpaper = DP-2, /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--2560x1080.png
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
+wallpaper = DP-1, /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--2560x1080.png
 {{- end }}
 #wallpaper = eDP-1, $wallpaper
 #if more than one monitor in use, can load a 2nd image
