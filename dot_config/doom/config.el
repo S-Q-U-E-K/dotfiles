@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "Zeke Aylin"
+      user-mail-address "zeke@aylin.net")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -15,7 +15,7 @@
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
-;; - `doom-symbol-font' -- for symbols
+;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
@@ -74,3 +74,67 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(setq frame-resize-pixelwise t)
+
+(setq load-path (append (list (expand-file-name "~/site-lisp")) load-path))
+
+(autoload 'LilyPond-mode "lilypond-mode")
+(setq auto-mode-alist
+      (cons '("\\.ly$" . LilyPond-mode) auto-mode-alist))
+
+(add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
+
+(add-hook 'window-setup-hook #'treemacs 'append)
+
+(use-package ewal
+  :init (setq ewal-use-built-in-always-p nil
+              ewal-use-built-in-on-failure-p t
+              ewal-built-in-palette "sexy-material"))
+(use-package ewal-doom-themes
+  :init (progn
+          (setq doom-theme-underline-parens t
+                my:rice:font (font-spec
+                              :family "Source Code Pro"
+                              :weight 'semi-bold
+                              :size 11.0))
+          (show-paren-mode +1)
+          (global-hl-line-mode)
+          (set-frame-font my:rice:font nil t)
+          (add-to-list  'default-frame-alist
+                        `(font . ,(font-xlfd-name my:rice:font))))
+  :config (progn
+            (load-theme 'ewal-doom-vibrant t)
+            (enable-theme 'ewal-doom-vibrant)))
+(use-package ewal-evil-cursors
+  :after (ewal-doom-themes)
+  :config (ewal-evil-cursors-get-colors
+           :apply t :spaceline t))
+(use-package spaceline
+  :after (ewal-evil-cursors winum)
+  :init (setq powerline-default-separator nil)
+  :config (spaceline-doom-theme))
+
+(defun chezmoi--evil-insert-state-enter ()
+  "Run after evil-insert-state-entry."
+  (chezmoi-template-buffer-display nil (point))
+  (remove-hook 'after-change-functions #'chezmoi-template--after-change 1))
+
+(defun chezmoi--evil-insert-state-exit ()
+  "Run after evil-insert-state-exit."
+  (chezmoi-template-buffer-display nil)
+  (chezmoi-template-buffer-display t)
+  (add-hook 'after-change-functions #'chezmoi-template--after-change nil 1))
+
+(use-package chezmoi)
+(defun chezmoi-evil ()
+  (if chezmoi-mode
+      (progn
+        (add-hook 'evil-insert-state-entry-hook #'chezmoi--evil-insert-state-enter nil 1)
+        (add-hook 'evil-insert-state-exit-hook #'chezmoi--evil-insert-state-exit nil 1))
+    (progn
+      (remove-hook 'evil-insert-state-entry-hook #'chezmoi--evil-insert-state-enter 1)
+      (remove-hook 'evil-insert-state-exit-hook #'chezmoi--evil-insert-state-exit 1))))
+(add-hook 'chezmoi-mode-hook #'chezmoi-evil)
+(global-set-key (kbd "C-c C f")  #'chezmoi-find)
+(global-set-key (kbd "C-c C s")  #'chezmoi-write)
+
