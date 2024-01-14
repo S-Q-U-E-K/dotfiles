@@ -1,6 +1,6 @@
 # setting path
 typeset -U path PATH
-path=(~/.local/bin ~/.emacs.d/bin ~/.config/scripts $path)
+path=(~/.local/bin ~/.config/emacs/bin ~/.config/scripts $path)
 export PATH
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
