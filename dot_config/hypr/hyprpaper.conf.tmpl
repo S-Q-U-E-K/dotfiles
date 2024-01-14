@@ -1,6 +1,8 @@
 #source = /home/zekea/.cache/wal/hyprland-colors.conf
 preload = /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--primary.png
+{{- if eq .chezmoi.hostname = "ArchLaptop" }}
 preload = /home/zekea/.config/Pictures/wallpapers/Celeste/Celeste_Space--2560x1080.png
+{{- end }}
 #preload = $wallpaper
 #if more than one preload is desired then continue to preload other backgrounds
 #preload = /path/to/next_image.png
