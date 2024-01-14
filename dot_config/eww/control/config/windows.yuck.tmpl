@@ -1,5 +1,9 @@
 (defwindow bar
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
   :monitor 1
+{{- else }}
+  :monitor 0
+{{- end }}
   :geometry (geometry :x "20px"
                       :y "0%"
                       :width "15%"
