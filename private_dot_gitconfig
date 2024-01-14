@@ -8,3 +8,5 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJdwtbRHO3Mgu5CS/c5i8HE6esHcqvG3iJFrIRphITb5
 	email = zeke@aylin.net
 	name = Zeke Aylin
+[pull]
+	rebase = false
