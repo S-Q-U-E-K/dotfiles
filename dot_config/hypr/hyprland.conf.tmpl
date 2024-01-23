@@ -4,8 +4,8 @@
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
-monitor=, highres, 1706x0, 1
-monitor=eDP-1, 2560x1440@165, 0x400, 1.5
+monitor=, highres, 1600x0, 1
+monitor=eDP-1, 2560x1440@165, 0x100, 1.60
 {{- end }}
 
 {{- if eq .chezmoi.hostname "WorkLaptop" }}
@@ -24,18 +24,22 @@ source = ~/.cache/wal/hyprland-colors.conf
 # Some default env vars.
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORM,wayland
-env = GDK_BACKEND=wayland,x11
-env = QT_QPA_PLATFORM="wayland;xcb"
-env = SDL_VIDEODRIVER=wayland
-env = CLUTTER_BACKEND=wayland
-env = XDG_CURRENT_DESKTOP=Hyprland
-env = XDG_SESSION_TYPE=wayland
-env = XDG_SESSION_DESKTOP=Hyprland
-env = QT_AUTO_SCREEN_SCALE_FACTOR=1
-env = QT_QPA_PLATFORM=wayland,xcb
-env = QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-env = QT_QPA_PLATFORMTHEME=qt5ct
-env = MOZ_ENABLE_WAYLAND=1 firefox
+env = GDK_BACKEND,wayland,x11
+env = SDL_VIDEODRIVER,wayland
+env = CLUTTER_BACKEND,wayland
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+env = QT_QPA_PLATFORM,wayland,xcb
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
+env = QT_QPA_PLATFORMTHEME,qt5ct
+env = MOZ_ENABLE_WAYLAND,1 firefox
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
+env = LIBVA_DRIVER_NAME,nvidia
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = WLR_NO_HARDWARE_CURSORS,1
+{{- end }}
 
 # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 input {
@@ -194,7 +198,7 @@ bind=$altmainMod,space,exec,~/.config/eww/bar/scripts/eww-bar-control
 #################
 
 # Reload Hyprland
-bind = $shiftmainMod,R,exec,reload
+bind = $shiftmainMod,R,exec,hyprctl reload
 
 # Close focused Window
 bind = $shiftmainMod, Q, killactive,
@@ -239,8 +243,9 @@ bind = $mainMod SHIFT, 9, movetoworkspace, 9
 bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
 # Scratch Pad
-bind=SUPER_SHIFT,S,movetoworkspace,special
-bind=SUPER,S,togglespecialworkspace,
+bind=SUPER_SHIFT,S,movetoworkspace,special:scratch
+bind=SUPER,S,togglespecialworkspace, scratch
+bind=SUPER,O,togglespecialworkspace, 1pass
 
 # Scroll Workspaces
 bind = $mainMod, mouse_down, workspace, e+1
@@ -332,6 +337,7 @@ exec-once=xautolock -time 10 -locker '/home/zekea/.config/scripts/i3lock.sh'
 
 #Polkit
 exec-once=/usr/lib/polkit-kde-authentication-agent-1
+exec-once=1password
 
 #Udiskie
 exec-once=udiskie
@@ -361,6 +367,14 @@ windowrulev2 = workspace 8 silent ,class:(discord)
 windowrulev2 = workspace 8 silent ,class:(Spotify)
 windowrulev2 = workspace 9 silent ,class:(lutris)
 windowrulev2 = forceinput ,class:(GodotGame1)
+windowrulev2 = float,class:^(leagueclientux.exe)$,title:^(League of Legends)
+#windowrule = size 1600 900,^(leagueclientux.exe)
+windowrule = center,^(leagueclientux.exe)
+windowrulev2 = float,class:^(league of legends.exe)$,title:^(League of Legends (TM) Client)$ windowrule = size 2560 1080,^(league of legends.exe)
+windowrulev2 = workspace 10 silent, class:^(league of legends.exe)
+windowrule = center,^(league of legends.exe)
+windowrulev2 = monitor DP-2,class:^(league of legends.exe)
+windowrule = forceinput,^(league of legends.exe)
 {{- end }}
 
 # Work:
@@ -368,12 +382,13 @@ windowrulev2 = workspace 2 silent ,class:(obsidian)
 
 # Misc:
 windowrulev2 = workspace name:lock silent ,class:(lockscreen)
-windowrulev2 = workspace special silent ,class:(1Password)
+windowrulev2 = workspace special:1pass silent ,class:(1Password)
 
 ## Workspace Rules
 
-workspace = 8, monitor:1, gapsin:0, gapsout:0
+workspace = 8, monitor:0, gapsin:0, gapsout:0
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
-workspace = 1, monitor:0, gapsin:5, gapsout:15
+workspace = 10, monitor:1, gapsin:5, gapsout:15
+workspace = 1, monitor:1, gapsin:5, gapsout:15
 {{- end }}

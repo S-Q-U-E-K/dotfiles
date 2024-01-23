@@ -36,7 +36,7 @@
 (defwidget vpn []
            (box :class "vpn"
                 (revealer :transition "slideleft"
-                          :reveal vpn_status
+                          :reveal vpn_reveal
                           :duration "350ms"
            (eventbox :onhover "${eww} update vpn_reveal=true"
                      :onhoverlost "${eww} update vpn_reveal=false"
