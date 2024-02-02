@@ -83,7 +83,7 @@
                (scale :flipped "true" :orientation "vertical" :min 0 :max 101 :value volume_percent :onchange "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ {}%" )
                     (label  :text "" :class "vol_icon"))
         (box :class "mic_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
-                (scale :flipped "true" :orientation "v" :min 0 :max 101 :value mic_percent :onchange "amixer -D pulse sset Capture {}%")
+                (scale :flipped "true" :orientation "v" :min 0 :max 101 :value mic_percent :onchange "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ {}%")
                     (label  :text "" :class "mic_icon"))
         (box :class "bright_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
                 (scale :flipped "true" :orientation "v" :min 0 :max 101 :value brightness_percent :onchange "brightnessctl set {}%")

@@ -296,6 +296,8 @@ bind=,XF86TouchpadToggle,exec,~/.config/scripts/touchpad-toggle.sh
 ## media control
 bind=,XF86AudioLowerVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --down
 bind=,XF86AudioRaiseVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --up
+bind=,XF86MonBrightnessDown,exec,~/.config/eww/bar/scripts/brightness-update.sh --down
+bind=,XF86MonBrightnessDown,exec,~/.config/eww/bar/scripts/brightness-update.sh --up
 bind = , XF86AudioPlay, exec, mpc -q toggle
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
