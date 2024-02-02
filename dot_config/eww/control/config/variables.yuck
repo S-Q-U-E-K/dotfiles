@@ -4,7 +4,7 @@
 
 (defpoll volume :interval "1s" "scripts/getvol")
 
-(defpoll volume_percent :interval "0.1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll volume_percent :interval "0.1s" "wpctl get-volume @DEFAULT_ADUIO_SINK@ | awk '{print $2 * 100}'")
 (defpoll mic_percent :interval "3s" "amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
 (defpoll brightness_percent :interval "3s" "brightnessctl -m -d amdgpu_bl1 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 
