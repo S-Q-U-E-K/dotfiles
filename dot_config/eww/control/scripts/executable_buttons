@@ -1,7 +1,7 @@
 #!/bin/bash
 WSTAT="$(nmcli r wifi)"
 NSTAT="$(dunstctl is-paused)"
-VSTAT="$(amixer -D pulse | head -6 | grep off | cut -d " " -f 8)"
+VSTAT="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')"
 PWSTAT="$(rfkill -o TYPE,SOFT | grep wlan | cut -d " " -f 7)"
 PBSTAT="$(rfkill -o TYPE,SOFT | grep bluetooth | cut -d " " -f 2)"
 
@@ -23,7 +23,7 @@ else
     NOTIF_BUT="notif_but_off"
 fi
 
-if [[ "$VSTAT" == "[off]" ]]; then
+if [[ "$VSTAT" == "[MUTED]" ]]; then
     VOL_BUT="vol_but_off"
 else
     VOL_BUT="vol_but"

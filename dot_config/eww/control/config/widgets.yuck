@@ -151,7 +151,7 @@
               (label :text "󰀝" :class "plane_icon"))
       (button :class notif_but :onclick "dunstctl set-paused toggle"
               (label :text "" :class "notif_icon"))
-      (button :class vol_but :onclick "amixer -D pulse set Master toggle"
+      (button :class vol_but :onclick "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
               (label :text "" :class "volume_icon")))))
 
 (defwidget power []
