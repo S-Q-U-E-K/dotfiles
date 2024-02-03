@@ -10,7 +10,7 @@
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
 HYPRLAND_DEVICE="asue1209:00-04f3:319f-touchpad"
 {{- else if eq .chezmoi.hostname "WorkLaptop" }}
-HYPRLAND_DEVICE="FTCS0038:00-2808:0106-touchpad"
+HYPRLAND_DEVICE="ftcs0038:00-2808:0106-touchpad"
 {{- end }}
 HYPRLAND_VARIABLE="device:$HYPRLAND_DEVICE:enabled"
 
