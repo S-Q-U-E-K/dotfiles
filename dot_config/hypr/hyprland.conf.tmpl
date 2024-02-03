@@ -291,8 +291,11 @@ bind = $shiftmainMod,x,exit,
 ##########
 
 # Toggle Touchpad
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
 bind=,XF86TouchpadToggle,exec,~/.config/scripts/touchpad-toggle.sh
-
+{{- else if eq .chezmoi.hostname "WorkLaptop" }}
+bind=,code:248,exec,~/.config/scripts/touchpad-toggle.sh
+{{- end }}
 ## media control
 bind=,XF86AudioLowerVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --down
 bind=,XF86AudioRaiseVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --up
