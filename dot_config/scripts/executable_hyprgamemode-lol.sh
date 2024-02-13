@@ -3,7 +3,7 @@ HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==2{print $2}')
 if [ "$HYPRGAMEMODE" = 1 ] ; then
     xrandr --output DP-2 --primary
     pkill -f swayidle
-    champ-r &> /dev/null
+    champ-r &> /dev/null &
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
