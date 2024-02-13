@@ -353,7 +353,7 @@ exec-once=mpd
 exec-once=spotify
 
 # autolock
-exec=swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh'
+exec-once=swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh'
 
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
