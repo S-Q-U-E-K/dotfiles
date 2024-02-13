@@ -16,6 +16,6 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     exit
 fi
 hyprctl reload
-#pkill -f champ-r
-killall champ-r
+pkill -f champ-r
+pkill -f champ-r
 swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh' &
