@@ -175,7 +175,7 @@
 
 
 (defwidget shortcuts1 []
-           (box :class "shortcut_tray" :class "ctrl_widget" :valign "center ":orientation "h" :space-evenly "true" :halign "fill"
+           (box :class "shortcut_tray" :class "ctrl_widget" :valign "center" :orientation "h" :space-evenly "true" :halign "fill"
                 (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
                      (button :class "firefox" :onclick "firefox &"
                              (label :text "󰈹" :class "firefox_icon"))
