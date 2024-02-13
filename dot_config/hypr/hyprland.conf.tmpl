@@ -171,6 +171,7 @@ bind=,V,exec,kitty vim
 bind=,V,submap,reset
 bind=,O,exec,obsidian
 bind=,O,submap,reset
+bind=,escape,submap,reset
 submap=reset
 
 # Terminal Apps
@@ -182,7 +183,7 @@ bind=,R,exec,kitty ranger
 bind=,R,submap,reset
 bind=,M,exec,kitty ncmpcpp
 bind=,M,submap,reset
-bind=,N,exec,kitty nmtui
+bind=,N,exec,kitty bash -c "sleep 0.5 ; nmtui"
 bind=,N,submap,reset
 bind=,B,exec, kitty btop
 bind=,B,submap,reset

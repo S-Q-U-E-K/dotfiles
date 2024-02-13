@@ -91,7 +91,7 @@
 
 
 (defwidget music []
-		(box :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "true"
+		(box :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "true" :class "msc_control"
 			(box :orientation "v" :spacing 5 :space-evenly "false" :vexpand "false" :hexpand "true" :class "msc_bg"
 				(label :halign "start" :class "song" :wrap "false" :limit-width 12 :text song)
 				(label :halign "start" :class "song_artist" :wrap "true" :limit-width 15 :text song_artist)
@@ -108,7 +108,7 @@
 
 (defwidget music_prog []
            (box :orientation "h" :space-evenly "false" :class "music_prog_bg"
-                (box :spacing 0 :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" :class "song_prog"
+                (box :spacing 0 :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "true" :class "song_prog"
 			         (scale :orientation "h" :min 0 :max 101 :value song_time))))
 
 (defwidget music_box []
@@ -174,17 +174,19 @@
           (scale :orientation "h" :min 0 :max 100 :value storage))))
 
 
-(defwidget shortcuts []
+(defwidget shortcuts1 []
            (box :class "shortcut_tray" :class "ctrl_widget" :valign "center ":orientation "h" :space-evenly "true" :halign "fill"
                 (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
-                     (button :class "firefox" :onclick "firefox"
+                     (button :class "firefox" :onclick "firefox &"
                              (label :text "󰈹" :class "firefox_icon"))
-                     (button :class "spotify" :onclick "spotify"
+                     (button :class "spotify" :onclick "spotify &"
                              (label :text "" :class "spotify_icon"))
-                     (button :class "discord" :onclick "discord"
+                     (button :class "discord" :onclick "discord &"
                              (label :text "󰙯" :class "discord_icon"))
-                     (button :class "nmtui" :onclick "kitty nmtui"
-                             (label :text "󰀂" :class "nmtui_icon")))))
+                     (button :class "nmtui" :onclick "kitty nmtui &"
+                             (label :text "󰀂" :class "nmtui_icon"))
+                     (button :class "emacs" :onclick "emacsclient -c -a 'emacs' &"
+                             (label :text "" :class "emacs_icon")))))
 
 ;; Control Centre ;;
 (defwidget layer1 []
@@ -219,7 +221,7 @@
 (defwidget layer5 []
            (box :orientation "h"
                 :class "layer"
-                (shortcuts)))
+                (shortcuts1)))
 
 (defwidget layer6 []
   (box :orientation "h"
