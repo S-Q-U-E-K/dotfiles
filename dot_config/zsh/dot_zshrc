@@ -67,6 +67,7 @@ fi
 
 # Starting programs:
 afetch
+. /opt/asdf-vm/asdf.sh
 
 # Aliases
 alias s="sudo"
