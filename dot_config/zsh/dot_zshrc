@@ -75,6 +75,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.config/zsh --work-tree=$HOME'
 alias eww-bar="eww -c .config/eww/bar"
 alias eww-ctrl="eww -c .config/eww/control"
 alias notes-save="cd ~/Vault/ ; git pull https://github.com/S-Q-U-E-K/Vault.git main ; git add . ; git commit -m \"Notes backup\" ; git push -u origin main"
+alias cm="chezmoi"
 #alias upgrade="sudo emerge --ask --verbose --update --deep --newuse @world"
 #alias config="sudo dispatch-conf"
 #alias emerge="sudo emerge --ask"
