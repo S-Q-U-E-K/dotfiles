@@ -4,7 +4,7 @@
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
-monitor=, highres, 1600x0, 1
+monitor=, highres@144, 1600x0, 1
 monitor=eDP-1, 2560x1440@165, 0x100, 1.60
 {{- end }}
 
@@ -339,8 +339,6 @@ exec-once=emacs --bg-daemon
 # Notifications
 exec-once=dunst -c /home/zekea/.config/dunst/dunstrc
 
-# Screen Locker
-exec-once=xautolock -time 10 -locker '/home/zekea/.config/scripts/i3lock.sh'
 
 #Polkit
 exec-once=/usr/lib/polkit-kde-authentication-agent-1
@@ -354,8 +352,7 @@ exec-once=mpd
 exec-once=spotify
 
 # autolock
-exec-once=swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh'
-
+exec-once=hypridle
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
 # Games:
@@ -389,18 +386,20 @@ windowrulev2 = pin,class:(ChampR),title:(Rune Popup)
 {{- end }}
 
 # Work:
+exec-once = [workspace 2 silent] obsidian
+exec-once = [workspace 2 silent] firefox
 windowrulev2 = workspace 2 silent ,class:(obsidian)
 
 # Misc:
-windowrulev2 = workspace name:lock silent ,class:(lockscreen)
 windowrulev2 = workspace 8 silent ,title:(Spotify Premium)
 windowrulev2 = workspace special:1pass silent ,class:(1Password)
 
 ## Workspace Rules
 
-workspace = 8, monitor:0, gapsin:0, gapsout:0
+workspace = 8, monitor:eDP-1, gapsin:0, gapsout:0
+workspace = 2, monitor:DP-2, gapsin:0, gapsout:0
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
-workspace = 10, monitor:1, gapsin:5, gapsout:15
-workspace = 1, monitor:1, gapsin:5, gapsout:15
+workspace = 10, monitor:DP-2, gapsin:5, gapsout:15
+workspace = 1, monitor:DP-2, gapsin:5, gapsout:15
 {{- end }}
