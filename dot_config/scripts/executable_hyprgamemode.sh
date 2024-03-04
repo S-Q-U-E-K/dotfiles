@@ -2,7 +2,7 @@
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==2{print $2}')
 if [ "$HYPRGAMEMODE" = 1 ] ; then
     xrandr --output DP-2 --primary
-    pkill -f swayidle
+    pkill -f hypridle
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
@@ -15,4 +15,4 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     exit
 fi
 hyprctl reload
-swayidle -w timeout 1800 '/home/zekea/.config/scripts/swaylock.sh' &
+hypridle &
