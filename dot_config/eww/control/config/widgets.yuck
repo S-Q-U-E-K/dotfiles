@@ -142,7 +142,7 @@
 
 (defwidget systray []
   (box :class "sys_tray" :class "ctrl_widget" :valign "center" :space-evenly "false" :orientation "h" :halign "fill"
-    (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
+    (box :orientation "h" :hexpand "true" :vexpand "true" :space-evenly "true" :halign "fill"
       (button :class wifi_but :onclick "scripts/nettoggle"
               (label :text "" :class "wifi_icon"))
       (button :class bt_but :onclick "scripts/bttoggle"
@@ -155,7 +155,7 @@
               (label :text "" :class "volume_icon")))))
 
 (defwidget power []
-  (box :class "power" :class "ctrl_widget" :valign "center" :space-evenly "false" :orientation "h" :halign "fill"
+  (box :class "power" :class "ctrl_widget" :valign "center" :space-evenly "false" :orientation "v" :halign "fill"
        (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
             (button :class "log_but" :onclick "hyprctl dispatch exit"
               (label :text "" :class "log_icon"))
@@ -175,7 +175,7 @@
 
 
 (defwidget shortcuts1 []
-           (box :class "shortcut_tray" :class "ctrl_widget" :valign "center" :orientation "h" :space-evenly "true" :halign "fill"
+           (box :class "shortcut_tray" :class "ctrl_widget" :valign "center" :orientation "v" :space-evenly "true" :halign "fill"
                 (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
                      (button :class "firefox" :onclick "firefox &"
                              (label :text "󰈹" :class "firefox_icon"))
@@ -186,7 +186,18 @@
                      (button :class "nmtui" :onclick "kitty nmtui &"
                              (label :text "󰀂" :class "nmtui_icon"))
                      (button :class "emacs" :onclick "emacsclient -c -a 'emacs' &"
-                             (label :text "" :class "emacs_icon")))))
+                             (label :text "" :class "emacs_icon")))
+                 (box :orientation "h" :hexpand "true" :vexpand "false" :space-evenly "true" :halign "fill"
+                     (button :class "gmail" :onclick "firefox --new-window https://mail.google.com &"
+                             (label :text "󰊫" :class "gmail_icon"))
+                     (button :class "gcalendar" :onclick "firefox --new-window https://calendar.google.com &"
+                             (label :text "" :class "gcalendar_icon"))
+                     (button :class "Arch_wiki" :onclick "firefox --new-window https://wiki.archlinux.org &"
+                             (label :text "" :class "arch_wiki_icon"))
+                     (button :class "youtube" :onclick "firefox --new-window https://www.youtube.com &"
+                             (label :text "󰗃" :class "youtube_icon"))
+                     (button :class "obsidian" :onclick "obsidian &"
+                             (label :text "󰎚" :class "obsidian_icon")))))
 
 ;; Control Centre ;;
 (defwidget layer1 []
@@ -219,7 +230,7 @@
        (systray)))
 
 (defwidget layer5 []
-           (box :orientation "h"
+           (box :orientation "v"
                 :class "layer"
                 (shortcuts1)))
 
