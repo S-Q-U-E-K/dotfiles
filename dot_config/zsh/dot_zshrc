@@ -202,4 +202,3 @@ vterm_printf() {
     fi
 }
 
-. /opt/asdf-vm/asdf.sh
