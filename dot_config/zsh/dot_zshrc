@@ -75,6 +75,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.config/zsh --work-tree=$HOME'
 alias eww-bar="eww -c .config/eww/bar"
 alias eww-ctrl="eww -c .config/eww/control"
 alias notes-save="cd ~/Vault/ ; git pull https://github.com/S-Q-U-E-K/Vault.git main ; git add . ; git commit -m \"Notes backup\" ; git push -u origin main"
+alias cm="chezmoi"
 #alias upgrade="sudo emerge --ask --verbose --update --deep --newuse @world"
 #alias config="sudo dispatch-conf"
 #alias emerge="sudo emerge --ask"
@@ -114,8 +115,8 @@ ZSH_THEME="bira"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode disabled  # disable automatic updates
+#zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -137,7 +138,7 @@ ENABLE_CORRECTION="true"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -160,7 +161,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git alias-finder aliases common-aliases command-not-found copybuffer fzf lpass pass vi-mode)
+plugins=(git alias-finder aliases common-aliases command-not-found copybuffer fzf  vi-mode 1password)
 
 source $ZSH/oh-my-zsh.sh
 
