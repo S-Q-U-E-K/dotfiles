@@ -165,7 +165,7 @@
               (label :text "" :class "reboot_icon"))
             (button :class "sleep_but" :onclick "systemctl suspend"
                     (label :text "󰤄" :class "sleep_icon"))
-            (button :class "lock_but" :onclick "/home/zekea/.config/scripts/swaylock.sh"
+            (button :class "lock_but" :onclick "hyprlock"
                     (label :text "" :class "lock_icon")))))
 
 (defwidget storage []
