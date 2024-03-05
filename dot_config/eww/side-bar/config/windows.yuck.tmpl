@@ -1,0 +1,15 @@
+(defwindow bar
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
+    :monitor 1
+{{- else if eq .chezmoi.hostname "WorkLaptop" }}
+    :monitor 0
+{{ end }}
+    :geometry (geometry :x "0%"
+                        :y "0px"
+                        :width "12px"
+                        :height "98%"
+                        :anchor "left center")
+    :stacking "bg"
+    :exclusive "true"
+    :focusable "false"
+    (bar))
