@@ -1,8 +1,0 @@
-#!/bin/bash
-UPDATES=$(checkupdates+aur | wc -l)
-
-if [ $UPDATES == 0 ]; then
-    echo false
-else
-    echo true
-fi
