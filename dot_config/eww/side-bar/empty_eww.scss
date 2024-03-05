@@ -1,0 +1,17 @@
+// Side Bar //
+
+@import "/home/zekea/.cache/wal/colors.scss";
+
+* { all: unset;
+    font-family: feather;
+    font-family: DaddyTimeMono NF;
+  }
+
+// Global Styles
+.bar-class {
+    background-color: $background;
+    color: $foreground;
+    padding: 5px;
+    margin: 4px 0px;
+    border-radius: 16px;
+}

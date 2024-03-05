@@ -1,0 +1,27 @@
+;; Bar Sections ;;
+(defwidget top[]
+           (box :orientation "v"
+                :class "bar-class"
+                :space-evenly "false"
+                :valign "end"))
+
+(defwidget mid[]
+           (box :orientation "v"
+                :class "bar-class"
+                :space-evenly "false"
+                :valign "end"))
+
+(defwidget bot[]
+           (box :orientation "v"
+                :class "bar-class"
+                :space-evenly "false"
+                :valign "end"))
+
+
+;; Bar ;;
+(defwidget bar []
+           (centerbox :orientation "v"
+                      :class "bar-class"
+                      (top)
+                      (mid)
+                      (bot)))
