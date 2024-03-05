@@ -1,0 +1,4 @@
+
+(include "/home/zekea/.config/eww/side-bar/config/variables.yuck")
+(include "/home/zekea/.config/eww/side-bar/config/widgets.yuck")
+(include "/home/zekea/.config/eww/side-bar/config/windows.yuck")
