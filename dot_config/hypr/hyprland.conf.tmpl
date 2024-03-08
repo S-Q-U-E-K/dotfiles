@@ -72,10 +72,15 @@ general {
 decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 	blur {
+{{- if eq .chezmoi.hostname "ArchLaptop" }}
     enabled = true
     size = 3
     passes = 1
     new_optimizations = true
+{{- else if eq .chezmoi.hostname "WorkLaptop" }}
+    enabled = false
+{{ end }}
+
 	}
 
     rounding = 10
@@ -130,6 +135,9 @@ device:epic-mouse-v1 {
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
 misc {
+{{- if eq .chezmoi.hostname "WorkLaptop"}}
+    vfr = true
+{{ end }}
      disable_hyprland_logo = true
 }
 

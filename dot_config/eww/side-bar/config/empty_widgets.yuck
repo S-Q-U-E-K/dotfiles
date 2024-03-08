@@ -1,17 +1,28 @@
+;; Top widgts ;;
+
+(defwidget workspace []
+  (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"
+    (box :class "workspaces"
+      (for i in workspace
+        (button
+          :onclick "hyprctl dispatch workspace ${i.id}"
+          :class "${i.class}"
+          "${i.name}")))))
 ;; Bar Sections ;;
-(defwidget top[]
+(defwidget top []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"
-                :valign "end"))
+                :valign "start"
+                (workspace)))
 
-(defwidget mid[]
+(defwidget mid []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"
-                :valign "end"))
+                :valign "center"))
 
-(defwidget bot[]
+(defwidget bot []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"

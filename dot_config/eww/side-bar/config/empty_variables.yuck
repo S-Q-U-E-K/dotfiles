@@ -1,0 +1,3 @@
+;; Listening Variabes ;;
+(deflisten workspace "hyprland-workspaces _ `jq -r \".[0].name\"`")
+(deflisten current_workspace :initial "1" "scripts/get-active-workspace")
