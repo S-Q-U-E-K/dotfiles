@@ -1,3 +1,10 @@
 ;; Listening Variabes ;;
-(deflisten workspace "hyprland-workspaces _ `jq -r \".[0].name\"`")
+(deflisten window :initial "..." "scripts/get-window-title")
+(deflisten workspaces :initial "[]" "scripts/get-workspaces")
 (deflisten current_workspace :initial "1" "scripts/get-active-workspace")
+(defpoll song :interval "3s"  "scripts/music_info --song")
+(defpoll song_artist :interval "3s"  "scripts/music_info --artist")
+(defpoll song_status :interval "3s"  "scripts/music_info --status")
+(defpoll loop_status :interval "5s"  "scripts/music_info --loop_ic")
+(defpoll song_time :interval "0.5s"  "scripts/music_info --time")
+(defpoll cover_art :interval "2s"  "scripts/music_info --cover")

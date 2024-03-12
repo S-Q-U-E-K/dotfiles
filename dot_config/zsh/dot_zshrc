@@ -67,7 +67,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # Starting programs:
-afetch
+neofetch
 
 # Aliases
 alias s="sudo"

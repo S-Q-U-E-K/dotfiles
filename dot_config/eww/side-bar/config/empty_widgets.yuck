@@ -1,26 +1,33 @@
 ;; Top widgts ;;
+(defwidget workspaces []
+  (eventbox :onscroll "bash ~/.config/eww/bar/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget" :vexpand "true" :orientation "v" :hexpand true
+    (box :space-evenly true :vexpand true :orientation "v"
+      (label :text "${workspaces}${current_workspace}" :visible false)
+      (for workspace in workspaces
+        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}" :orientation "v" :space-evenly "false" :vexpand "true"
+            (label :text "${workspace.id == current_workspace ? "" : ""}" :class "workspace-label")))))))
 
-(defwidget workspace []
-  (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"
-    (box :class "workspaces"
-      (for i in workspace
-        (button
-          :onclick "hyprctl dispatch workspace ${i.id}"
-          :class "${i.class}"
-          "${i.name}")))))
+(defwidget music_ctl []
+           (box :orientation "v" :class "msc_ctrl_widget"
+                  (box :orientation "v" :spacing 5 :halign "center" :space-evenly "true" :vexpand "false" :hexpand "false" :class "msc_control"
+					(button :class "song_btn_prev" :onclick "~/.config/eww/control/scripts/music_info --prev" "")
+					(button :class "song_btn_play" :onclick "~/.config/eww/control/scripts/music_info --toggle" song_status)
+					(button :class "song_btn_next" :onclick "~/.config/eww/control/scripts/music_info --next" ""))))
 ;; Bar Sections ;;
 (defwidget top []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"
                 :valign "start"
-                (workspace)))
+                (workspaces)))
 
 (defwidget mid []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"
-                :valign "center"))
+                :valign "center"
+                (music_ctl)))
 
 (defwidget bot []
            (box :orientation "v"
