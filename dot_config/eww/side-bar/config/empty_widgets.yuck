@@ -1,4 +1,13 @@
 ;; Top widgts ;;
+
+(defwidget control []
+  (button :onclick eww-control :class "control_but"
+          (label :text "" :class "control_but_icon")))
+
+(defwidget sep []
+  (box :class "sep"
+   (label :text " ")))
+
 (defwidget workspaces []
   (eventbox :onscroll "bash ~/.config/eww/bar/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget" :vexpand "true" :orientation "v" :hexpand true
     (box :space-evenly true :vexpand true :orientation "v"
@@ -14,12 +23,15 @@
 					(button :class "song_btn_prev" :onclick "~/.config/eww/control/scripts/music_info --prev" "")
 					(button :class "song_btn_play" :onclick "~/.config/eww/control/scripts/music_info --toggle" song_status)
 					(button :class "song_btn_next" :onclick "~/.config/eww/control/scripts/music_info --next" ""))))
+
 ;; Bar Sections ;;
 (defwidget top []
            (box :orientation "v"
                 :class "bar-class"
                 :space-evenly "false"
                 :valign "start"
+                (control)
+                (sep)
                 (workspaces)))
 
 (defwidget mid []
