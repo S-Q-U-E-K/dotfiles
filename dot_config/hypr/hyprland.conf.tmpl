@@ -107,7 +107,6 @@ animations {
 }
 
 dwindle {
-    # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
     pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = yes # you probably want this
 }
@@ -123,10 +122,10 @@ gestures {
 }
 
 # Example per-device config
-# See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-device:epic-mouse-v1 {
-    sensitivity = -0.5
-}
+# See https://wiki.hyprland.org/Configuring/Keywords/executing for more
+# device:epic-mouse-v1 {
+#  sensitivity = -0.5
+#}
 
 # Example windowrule v1
 # windowrule = float, ^(kitty)$
@@ -143,11 +142,15 @@ misc {
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
-#############################
-#############################
-##### Hyprland Keybinds #####
-#############################
-#############################
+
+
+
+
+
+# Hyprland Keybinds 
+
+
+
 
 # Set variables
 $mainMod = SUPER
@@ -157,9 +160,14 @@ $altmainMod = $mainMod_ALT
 # Common Apps
 $launcher = ~/.config/rofi/launchers/type-7/launcher.sh
 
-##################
-## App Keybinds ##
-##################
+
+
+
+
+# App Keybinds 
+
+
+
 
 # Terminal
 bind = $mainMod, Return, exec, kitty
@@ -201,9 +209,15 @@ submap=reset
 bind=$mainMod,space,exec,~/.config/eww/bar/scripts/eww-control
 bind=$altmainMod,space,exec,~/.config/eww/bar/scripts/eww-bar-control
 
-#################
-## WM Keybinds ##
-#################
+
+
+
+
+
+# WM Keybinds 
+
+
+
 
 # Reload Hyprland
 bind = $shiftmainMod,R,exec,hyprctl reload
@@ -212,7 +226,7 @@ bind = $shiftmainMod,R,exec,hyprctl reload
 bind = $shiftmainMod, Q, killactive,
 
 
-## Navigation:
+# Navigation:
 
 # Focusing windows:
 bind = $mainMod, H, movefocus, l
@@ -259,7 +273,7 @@ bind=SUPER,O,togglespecialworkspace, 1pass
 bind = $mainMod, mouse_down, workspace, e+1
 bind = $mainMod, mouse_up, workspace, e-1
 
-## Resize:
+# Resize:
 
 # Mouse resize
 bindm = $mainMod, mouse:272, movewindow
@@ -295,9 +309,14 @@ bind=$mainMod, F, fullscreen,
 # Quit WM
 bind = $shiftmainMod,x,exit,
 
-##########
-## Misc ##
-##########
+
+
+
+# Misc 
+
+
+
+
 
 # Toggle Touchpad
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
@@ -305,7 +324,7 @@ bind=,XF86TouchpadToggle,exec,~/.config/scripts/touchpad-toggle.sh
 {{- else if eq .chezmoi.hostname "WorkLaptop" }}
 bind=,code:248,exec,~/.config/scripts/touchpad-toggle.sh
 {{- end }}
-## media control
+# media control
 bind=,XF86AudioLowerVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --down
 bind=,XF86AudioRaiseVolume,exec,~/.config/eww/bar/scripts/volume-update.sh --up
 bind=,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -319,11 +338,15 @@ bind = , XF86AudioPlay, exec, mpc -q toggle
 bind=,XF86Launch4,exec,asusctl profile -n & notify-send "Laptop Profile:" "$(asusctl profile --profile-get)" & sleep 5
 {{- end }}
 
-##################
-## Startup Apps ##
-##################
 
-## Appearance:
+
+
+# Startup Apps 
+
+
+
+
+# Appearance:
 
 # Bar:
 exec-once=eww -c /home/zekea/.config/eww/bar daemon
@@ -333,7 +356,7 @@ exec-once=eww -c /home/zekea/.config/eww/control daemon
 # Wallpaper:
 exec=hyprpaper
 
-## System Apps
+# System Apps
 
 # NetworkManager
 exec-once=nm-applet
@@ -368,9 +391,14 @@ exec-once=discord
 exec-once=firefox && hyprctl dispatch movetoworkspacesilent 10, class:(firefox)
 {{- end }}
 
-##################
-## Window Rules ##
-##################
+
+
+
+
+# Window Rules
+
+
+
 
 
 {{- if eq .chezmoi.hostname "ArchLaptop" }}
@@ -402,7 +430,7 @@ windowrulev2 = workspace 2 silent ,class:(obsidian)
 windowrulev2 = workspace 8 silent ,title:(Spotify Premium)
 windowrulev2 = workspace special:1pass silent ,class:(1Password)
 
-## Workspace Rules
+# Workspace Rules
 
 workspace = 8, monitor:eDP-1, gapsin:0, gapsout:0
 workspace = 2, monitor:DP-2, gapsin:0, gapsout:0
